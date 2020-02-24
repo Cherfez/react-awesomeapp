@@ -2,7 +2,7 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Title from "./Title.js";
-import Pokemon from "./Pokemon.js";
+import Pokemon from "./Pokemon/Pokemon.js";
 
 const all_pokemon = [
   {
@@ -38,19 +38,23 @@ const all_pokemon = [
 function App() {
   return (
     <div className="App">
-      <main>
+      <main className="container my-5">
         <Title content="POKEMAAAAANS" />
-        {all_pokemon.map(pokemon => {
-          return (
-            <Pokemon
-              name={pokemon.name}
-              weight={pokemon.weight}
-              awesome={pokemon.awesome}
-              terrifying={pokemon.terrifying}
-              abilities={pokemon.abilities}
-            />
-          );
-        })}
+        <div className="row mt-4">
+          {all_pokemon.map(pokemon => {
+            return (
+              <div className="col-md-6 col-lg-4">
+                <Pokemon
+                  name={pokemon.name}
+                  weight={pokemon.weight}
+                  awesome={pokemon.awesome}
+                  terrifying={pokemon.terrifying}
+                  abilities={pokemon.abilities}
+                />
+              </div>
+            );
+          })}
+        </div>
         {/*
         <Pokemon
           name="Charizard"
@@ -80,20 +84,6 @@ function App() {
         />
         */}
       </main>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Welcome to Codaisseur!
-        </a>
-      </header>
     </div>
   );
 }
