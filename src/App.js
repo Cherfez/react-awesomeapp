@@ -40,6 +40,18 @@ function App() {
     <div className="App">
       <main>
         <Title content="POKEMAAAAANS" />
+        {all_pokemon.map(pokemon => {
+          return (
+            <Pokemon
+              name={pokemon.name}
+              weight={pokemon.weight}
+              awesome={pokemon.awesome}
+              terrifying={pokemon.terrifying}
+              abilities={pokemon.abilities}
+            />
+          );
+        })}
+        {/*
         <Pokemon
           name="Charizard"
           weight="true"
@@ -66,6 +78,7 @@ function App() {
           terrifying="Its a massive wasp?!"
           abilities={["unnerve", "Intimidate"]}
         />
+        */}
       </main>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
