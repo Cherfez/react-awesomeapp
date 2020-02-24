@@ -2,12 +2,70 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Title from "./Title.js";
+import Pokemon from "./Pokemon.js";
+
+const all_pokemon = [
+  {
+    name: "Charizard",
+    weight: 90,
+    awesome: true,
+    terrifying: false,
+    abilities: ["Blaze", "Solar power", "Tough claws", "Drought"]
+  },
+  {
+    name: "Bulbasaur",
+    weight: 6.9,
+    awesome: true,
+    terrifying: false,
+    abilities: ["Overgrow", "Chlorophyll"]
+  },
+  {
+    name: "Mewtwo",
+    weight: 122,
+    awesome: true,
+    terrifying: true,
+    abilities: ["Pressure", "Unnerve", "Steadfast", "Insomnia"]
+  },
+  {
+    name: "Mega beedrill",
+    weight: 65,
+    awesome: false,
+    terrifying: true,
+    abilities: ["Intimidate", "Unnerve"]
+  }
+];
 
 function App() {
   return (
     <div className="App">
       <main>
-        <Title content="Some simple Title" />
+        <Title content="POKEMAAAAANS" />
+        <Pokemon
+          name="Charizard"
+          weight="true"
+          terrifying="Damn right"
+          abilities={["Blaze", "Solar Power", "Tough Claws", "Drought"]}
+        />
+        <Pokemon
+          name="Bulbasaur"
+          weight="6.9"
+          awesome="true"
+          terrifying="depends"
+          abilities={["Overgrow", "Chlorophyll"]}
+        />
+        <Pokemon
+          name="Mewtwo"
+          weight="122"
+          awesome="true"
+          terrifying="Youre not?"
+          abilities={["Pressure", "Unnerve", "Steadfast", "Insomnia"]}
+        />
+        <Pokemon
+          name="Mega Drill"
+          weight="65"
+          terrifying="Its a massive wasp?!"
+          abilities={["unnerve", "Intimidate"]}
+        />
       </main>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
