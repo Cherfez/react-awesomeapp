@@ -3,6 +3,10 @@ import logo from "./logo.svg";
 import "./App.css";
 import Title from "./Title.js";
 import Pokemon from "./Pokemon/Pokemon.js";
+import LikeCounter from "./Pokemon/LikeCounter";
+import LikeButton from "./Pokemon/LikeButton";
+import AwesomePokemon from "./Pokemon/AwesomePokemon";
+import ArticleList from "./Pokemon/ArticleList";
 
 const all_pokemon = [
   {
@@ -40,6 +44,8 @@ function App() {
     <div className="App">
       <main className="container my-5">
         <Title content="POKEMAAAAANS" />
+        <LikeCounter />
+        <LikeButton />
         <div className="row mt-4">
           {all_pokemon.map(pokemon => {
             return (
@@ -55,6 +61,8 @@ function App() {
             );
           })}
         </div>
+        <AwesomePokemon />
+        <ArticleList />
         {/*
         <Pokemon
           name="Charizard"
